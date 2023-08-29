@@ -83,7 +83,7 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 - [ ] Store içerisinden `favorites` değerini `FavoriteMovieList` componentine bağlayın ve test edin.
 
-- [ ] `DisplayFavorites` değerini store içerisinden çekerek `Movie` ve `AppHeader` componentinde ilgili yerlerde kullanın.
+- [ ] `DisplayFavorites` değerini store içerisinden çekerek `Movie` ve `AppHeader` componentinde ilgili yerlerde kullanın. ?? Movie ??? 
 
 #### Favoriler eylemleri ekleyin
 
