@@ -3,8 +3,8 @@ import { favReducer } from './favReducer';
 import movieReducer from './movieReducer';
 
 const reducer = combineReducers({
-    favReducer,
-    movieReducer
+    favReducer :favReducer,
+    movieReducer:movieReducer
 });
 
 export default reducer

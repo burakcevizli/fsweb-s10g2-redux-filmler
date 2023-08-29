@@ -1,8 +1,8 @@
 const initialState = {
     favorites: {
-        Film: []
+        film: []
     },
-    diplayFavorites: false,
+    displayFavorites: false,
 }
 
 export const favReducer = (state = initialState, action) => {
