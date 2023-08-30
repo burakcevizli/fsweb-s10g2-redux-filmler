@@ -10,19 +10,23 @@ const initialState = {
 export const favReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_FAVORITES:
-            return{
+            return {
                 ...state,
-                displayFavorites:!(state.displayFavorites)
+                displayFavorites: !(state.displayFavorites)
             }
         case ADD_FAVORITE:
-            return{
-                ...state,
-                favorites:[...state.favorites, action.payload]
-            }
+            if (state.favorites.includes(action.payload)) {
+                return state;
+            } else
+                return {
+                    ...state,
+                    favorites: [...state.favorites, action.payload],
+                };
+
         case REMOVE_FAVORITE:
-            return{
+            return {
                 ...state,
-                favorites:state.favorites.filter((item) => action.payload !== item.id)
+                favorites: state.favorites.filter((item) => action.payload !== item.id)
             }
         default:
             return state;

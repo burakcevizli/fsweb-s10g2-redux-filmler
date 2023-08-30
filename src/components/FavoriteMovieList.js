@@ -6,13 +6,14 @@ import { removeFavorite } from '../actions/favoritesActions';
 
 const FavoriteMovieList = (props) => {
   const favorites = useSelector(store => store.favReducer.favorites);
+  const gizleGoster = useSelector(store => store.favReducer.displayFavorites)
   const dispatch = useDispatch();
   const removeFavHandler =(id)=>{
     dispatch(removeFavorite(id))
   }
 
   return (
-    <div className="flex-1 sm:max-w-[250px] p-5 pr-5 bg-white shadow rounded-md">
+    gizleGoster && <div className="flex-1 sm:max-w-[250px] p-5 pr-5 bg-white shadow rounded-md">
       <h5 className='font-bold'>Favori Filmler</h5>
       <div className="pt-3 text-sm">
         {
